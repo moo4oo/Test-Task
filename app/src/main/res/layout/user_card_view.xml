@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/card_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp">
+        <ImageView
+            android:id="@+id/user_profile_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_margin="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:id="@+id/user_login_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:textSize="20sp"
+            tools:text="name"
+            android:textColor="@color/vk_black"
+            app:layout_constraintTop_toTopOf="@id/user_profile_image"
+            app:layout_constraintLeft_toRightOf="@id/user_profile_image"/>
+        <TextView
+            android:id="@+id/score_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:text="@string/score_info"
+            app:layout_constraintTop_toBottomOf="@id/user_login_view"
+            app:layout_constraintLeft_toLeftOf="@id/user_login_view"/>
+        <TextView
+            android:id="@+id/score_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/vk_black"
+            android:textSize="20sp"
+            tools:text="160"
+            app:layout_constraintTop_toBottomOf="@id/user_login_view"
+            app:layout_constraintLeft_toRightOf="@id/score_info"/>
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v7.widget.CardView>
